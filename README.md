@@ -9,49 +9,47 @@ Your objective is to take the current classical state-of-the-art Memetic Tabu Se
 **We want you to vibe code!**
 In modern R&D and this challenge, speed matters, but rigor and coordination matter more. We expect you to employ Agentic Strategies, utilizing AI tools that can reason across your codebase to act as your collaborators while you operate as the Technical Leadership Team. Your collective job is to decompose the problem, delegate tasks across your team and AI agents, and most importantly verify the work. As Leads, you must clearly communicate your planning, workflow, and solution, ensuring your team remains aligned and ready to pivot even as technical challenges shift your strategy.
 
-**Milestones and Evaluation**
+## Logistics, Milestones, and Evaluation
 
-This challenge is divided into two phases and four milestones, all of which are graded components of your final submission:
-
-Phase 1 Milestones:
-1. Ramp Up: Master the state-of-the-art for LABS via a scaffolded tutorial.
-2. Research & Plan: Perform due diligence to design a custom quantum strategy and acceleration plan.
-
-Phase 2 Milestones:
-
-3. Build: Validate your algorithm on a CPU in qbraid, then migrate to Brev.dev to deploy full GPU acceleration.
-
-4. Showcase and Retrospective: Present your solution, performance metrics, and your AI-driven workflow.
-
-## Logistics
-
-In this challenge, you will mimic a real-world R&D pipeline, moving from rapid prototyping to high-performance deployment. You will utilize two distinct platforms, each chosen for a specific phase of your development lifecycle:
+In this challenge, you will mimic a real-world R&D pipeline, moving from rapid prototyping to high-performance deployment. You will utilize two distinct platforms, each chosen for a specific phase of your development lifecycle. 
 
 * **Phase 1 (Prototyping): qBraid**
 
-    For the "Ramp Up" and initial CPU validation, you will work on Milestones 1 and 2 in qBraid. This is your "Dev Environment"—a zero-setup, pre-configured cudaq sandbox that allows you to focus entirely on mastering the algorithm and logic without worrying about infrastructure overhead.
+    For the "Ramp Up" and initial CPU validation, you will work on Milestones 1 and 2 in [qBraid](https://account-v2.qbraid.com/). qBraid is your "Dev Environment" — a zero-setup, pre-configured cudaq sandbox that allows you to focus entirely on mastering the algorithm and logic without worrying about infrastructure overhead.
+
+    ### Milestones:
+    1. **Ramp Up**: Master the state-of-the-art for LABS via a scaffolded tutorial.
+    
+    2. **Research & Plan**: Perform due diligence to design a custom quantum strategy and acceleration plan.
 
 * **Phase 2 (Acceleration): Brev**
 
     Once your logic is validated, you will "graduate" your code to [Brev](https://brev.nvidia.com/) to complete Milestone 3 and 4. Brev provides on-demand access to a wide variety of NVIDIA GPU architectures (L4s, T4s, A100s, ...). You will use this platform to test your solution across different hardware configurations and unlock full GPU acceleration.
 
-## Phase 1 (Prototyping) on the qBraid Platform
+    ### Milestones: 
+    3. **Build**: Validate your algorithm on a CPU in qBraid in the previous milestone, then migrate to Brev to deploy full GPU acceleration.
+
+    4. **Showcase and Retrospective**: Present your solution, performance metrics, and your AI-driven workflow.
+
+**Good luck. Let the agents build the code, you build the architecture.**
+
+## Accessing Phase 1 of the Challenge with qBraid
 
 <a href="https://account-v2.qbraid.com/?gitHubUrl=https://github.com/iQuHACK/2026-NVIDIA" target="_parent"><img src="https://qbraid-static.s3.amazonaws.com/logos/Launch_on_qBraid_white.png" alt="Launch On qBraid" width="150"/></a>
 
 During the duration of the hackathon, you will have access to the new and improved version of the qBraid platform accessible through here: https://account-v2.qbraid.com/
 
-## Phase 2 (Acceleration) on the Brev Platform
+## Accessing Phase 2 of the Challenge with Brev
 
 <a href="https://brev.nvidia.com/" target="_parent"><img src="https://brev-assets.s3.us-west-1.amazonaws.com/nv-lb-dark.svg" width="150"/></a>
 
 Congratulations on finishing the first part of the challenge! 
 
-You will now get to run your code on real GPUs using NVIDIA's Brev Platform. Don't worry, you don't need to pay for anything! Once completing Phase 1 and your logic is validated, we will provide you with a **$20 Brev coupon code**. 
+You will now get to run your code on real GPUs using NVIDIA's Brev Platform. Don't worry, you don't need to pay for anything! Once completing Phase 1 and your logic is validated, we will provide you with a **$20 Brev coupon code**.
 
 > Take budget into consideration when selecting a GPU to run your code on. We know it's tempting to select a B300, but selecting more expensive options will burn through your credits significantly faster.
 
-**Good luck. Let the agents build the code, you build the architecture.**
+
 
 ## Resources
 ### CUDA-Q    
