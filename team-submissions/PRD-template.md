@@ -1,8 +1,8 @@
 # Product Requirements Document (PRD)
 
 **Project Name:** [e.g., LABS-Solv-V1]
-**Team Name:** [e.g., QuantumVibes]
-**GitHub Repository:** [Insert Link Here]
+**Team Name:** Mehrafrouz
+**GitHub Repository:** [https://github.com/AdeleMehrafrouz/2026-NVIDIA/tree/main/team-submissions]
 
 ---
 
@@ -17,7 +17,7 @@
 
 | Role | Name | GitHub Handle | Discord Handle
 | :--- | :--- | :--- | :--- |
-| **Project Lead** (Architect) | [Name] | [@handle] | [@handle] |
+| **Project Lead** (Architect) | Adele Mehrafrouz | https://github.com/AdeleMehrafrouz | adele_58262_45899 |
 | **GPU Acceleration PIC** (Builder) | [Name] | [@handle] | [@handle] |
 | **Quality Assurance PIC** (Verifier) | [Name] | [@handle] | [@handle] |
 | **Technical Marketing PIC** (Storyteller) | [Name] | [@handle] | [@handle] |
@@ -28,36 +28,29 @@
 **Owner:** Project Lead
 
 ### Choice of Quantum Algorithm
-* **Algorithm:** [Identify the specific algorithm or ansatz]
-    * *Example:* "Quantum Approximate Optimization Algorithm (QAOA) with a hardware-efficient ansatz."
-    * *Example:* "Variational Quantum Eigensolver (VQE) using a custom warm-start initialization."
+* **Algorithm:** Digitized counterdiabatic-inspired circuit (tutorial baseline), with plans to explore QAOA-style ansätze in Phase 2.
 
-* **Motivation:** [Why this algorithm? Connect it to the problem structure or learning goals.]
-    * *Example (Metric-driven):* "We chose QAOA because we believe the layer depth corresponds well to the correlation length of the LABS sequences."
-    *  Example (Skills-driven):* "We selected VQE to maximize skill transfer. Our senior members want to test a novel 'warm-start' adaptation, while the standard implementation provides an accessible ramp-up for our members new to quantum variational methods."
-   
+
+* **Motivation:**  
+For Phase 1, I focused on fully understanding and validating the tutorial’s counterdiabatic construction and the hybrid quantum–classical workflow. For Phase 2, I plan to explore QAOA-style parameterized circuits as an alternative quantum seed, since their layered structure may align well with the correlation structure of LABS sequences.
 
 ### Literature Review
-* **Reference:** [Title, Author, Link]
-* **Relevance:** [How does this paper support your plan?]
-    * *Example:* "Reference: 'QAOA for MaxCut.' Relevance: Although LABS is different from MaxCut, this paper demonstrates how parameter concentration can speed up optimization, which we hope to replicate."
-
+* **Reference:** Scaling advantage with quantum-enhanced memetic tabu search,Alejandro Gomez Cadavid, https://arxiv.org/html/2511.04553v1
+* **Relevance:** This paper motivates the hybrid approach used in this project, where quantum-generated samples seed a classical Memetic Tabu Search rather than replace it, and shows that such seeding can improve scaling behavior.
 ---
 
 ## 3. The Acceleration Strategy
 **Owner:** GPU Acceleration PIC
 
 ### Quantum Acceleration (CUDA-Q)
-* **Strategy:** [How will you use the GPU for the quantum part?]
-    * *Example:* "After testing with a single L4, we will target the `nvidia-mgpu` backend to distribute the circuit simulation across multiple L4s for large $N$."
+* **Strategy:** For Phase 1, all quantum circuits are validated on CPU using CUDA-Q in qBraid. 
  
 
 ### Classical Acceleration (MTS)
-* **Strategy:** [The classical search has many opportuntities for GPU acceleration. What will you chose to do?]
-    * *Example:* "The standard MTS evaluates neighbors one by one. We will use `cupy` to rewrite the energy function to evaluate a batch of 1,000 neighbor flips simultaneously on the GPU."
+* **Strategy:** The classical MTS is currently CPU-based. In Phase 2, I plan to explore GPU acceleration of the energy evaluation step using vectorized or batched computation to reduce the cost of neighborhood exploration.
 
 ### Hardware Targets
-* **Dev Environment:** [e.g., Qbraid (CPU) for logic, Brev L4 for initial GPU testing]
+* **Dev Environment:** qBraid (CPU) for algorithm development and validation
 * **Production Environment:** [e.g., Brev A100-80GB for final N=50 benchmarks]
 
 ---
